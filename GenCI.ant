@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     2013-4-20 下午9:14:00                                                        
+
+     GenCI    
+     description
+                   
+     nickwar                                                                
+     ====================================================================== -->
+<project name="GenCI" default="GenCI">
+    <description>
+            description
+    </description>
+
+    <!-- ================================= 
+          target: GenCI              
+         ================================= -->
+    <target name="GenCI" description="description">
+		<exec executable="javah" dir="${basedir}/bin/classes">
+		<arg value="-classpath"/>
+		<arg value="${basedir}/bin/classes"/>
+		<arg value="-d"/>
+		<arg value="${basedir}/jni"/>
+		<arg value="-jni"/>
+		<arg value="cn.nickwar.MainActivity"/>
+		</exec>        
+
+    </target>
+
+</project>
